@@ -51,7 +51,36 @@
       color: #666;
       font-size: 0.95rem;
     }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
 
+.header-text {
+  flex: 1;
+}
+
+.profile-photo {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+}
     footer {
       margin-top: 50px;
       padding-top: 15px;
